@@ -1,6 +1,5 @@
-package com.kakaomap.domain.web;
+package com.kakaomap.web;
 
-import com.kakaomap.web.KakaoController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.web.servlet.MockMvc;
@@ -21,7 +20,7 @@ public class KakaocontrollerTest {
 
     @Test
     public void map_return() throws Exception{
-        String hello = "kakao";
+        String hello = "Mainpage";
 
         mvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string(hello));
     }

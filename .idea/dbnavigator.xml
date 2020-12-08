@@ -64,8 +64,8 @@
     <connections>
       <connection id="dc90c807-c3a3-4766-8e8d-0ac6c9147817" active="true">
         <database>
-          <name value="Connection" />
-          <description value="" />
+          <name value="KAKOMAP" />
+          <description value="KAKOMAP" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
           <database-version value="9999.0" />

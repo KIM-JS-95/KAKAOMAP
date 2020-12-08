@@ -1,6 +1,5 @@
-package com.kakaomap.domain.dto;
+package com.kakaomap.web;
 
-import com.kakaomap.web.KakaoController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +13,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = KakaoController.class)
-public class MysqldtoTest {
+public class ViewcontrollerTest {
 
     @Autowired
     private MockMvc mvc;
 
     @Test
-    public void map_return() throws Exception {
-        String hello = "kakao";
+    public void map_return() throws Exception{
+        String hello = "View";
 
-        mvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string(hello));
+        mvc.perform(get("/map")).andExpect(status().isOk()).andExpect(content().string(hello));
     }
+
+
 }

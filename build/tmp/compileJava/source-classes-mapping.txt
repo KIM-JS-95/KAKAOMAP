@@ -1,8 +1,10 @@
-com/kakaomap/kakaoapplication.java
- com.kakaomap.kakaoapplication
-com/kakaomap/dto/kakaomapDto.java
- com.kakaomap.dto.kakaomapDto
 com/kakaomap/web/KakaoController.java
  com.kakaomap.web.KakaoController
+com/kakaomap/kakaoapplication.java
+ com.kakaomap.kakaoapplication
 com/kakaomap/web/IndexController.java
  com.kakaomap.web.IndexController
+com/kakaomap/domain/posts/Posts.java
+ com.kakaomap.domain.posts.Posts
+com/kakaomap/domain/posts/PostsRepository.java
+ com.kakaomap.domain.posts.PostsRepository

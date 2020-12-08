@@ -1,4 +1,0 @@
-com/kakaomap/domain/web/KakaocontrollerTest.java
- com.kakaomap.domain.web.KakaocontrollerTest
-com/kakaomap/domain/web/ViewcontrollerTest.java
- com.kakaomap.domain.web.ViewcontrollerTest
