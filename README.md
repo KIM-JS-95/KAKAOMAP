@@ -1,0 +1,16 @@
+## Electronic Charge station
+ Create a map that Charge station for electric vehicles
+
+ I am using KAKAO API
+
+
+## VERSION
+ 1. JAVA -VERSION 15.0
+ 2. GRADLE -VERSION 4.10.2
+
+## DEBUGING LOG
+2020.12.6 LOAD KAKAO API KEY, CREATE MAP IN MUSTACHE(HTML)
+
+2020.12.8 POSTS, INTERFACE REPOSITORY, KAKAO MAPPING
+
+2020.12.9 DB, UTF-8 INCODING
