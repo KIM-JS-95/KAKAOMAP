@@ -28,21 +28,18 @@ public class PostsRepositoryTest {
     }
     @Test
     public void 게시글_불러오기(){
-        String state = "테스트 게시글";
-        String region = "테스트 본문";
+        String add = "테스트 게시글";
         String type = "타입";
 
         postsRepository.save(Posts.builder()
-                .state(state)
-                .region(region)
+                .add(add)
                 .type(type)
                 .build());
 
         List<Posts> postsList = postsRepository.findAll();
 
         Posts posts = postsList.get(0);
-        assertThat(posts.getState()).isEqualTo(state);
-        assertThat(posts.getRegion()).isEqualTo(region);
+        assertThat(posts.getAdd()).isEqualTo(add);
         assertThat(posts.getType()).isEqualTo(type);
     }
 

@@ -16,15 +16,13 @@ public class Posts{
 
 
     @Column(length =500, nullable = false)
-    private String state;
-    private String region;
+    private String add;
 
     private String type;
 
     @Builder
-    public Posts(String state, String region, String type){
-     this.state=state;
-     this.region=region;
+    public Posts(String add, String type){
+     this.add=add;
      this.type=type;
     }
 }
