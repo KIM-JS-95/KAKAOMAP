@@ -17,7 +17,6 @@ public class Posts{
 
     @Column(length =500, nullable = false)
     private String add;
-
     private String type;
 
     @Builder
