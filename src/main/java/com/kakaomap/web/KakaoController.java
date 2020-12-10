@@ -1,15 +1,22 @@
 package com.kakaomap.web;
 
+import com.kakaomap.domain.posts.PostsService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+//메인페이지
+@RequiredArgsConstructor
 @Controller
 public class KakaoController {
 
-    @GetMapping("/map")
-        public String View(){
-            return "View";
-        }
+    private final PostsService postsService;
+    @GetMapping("/")
+    public String index(Model model){
+        model.addAttribute("posts", postsService.findAllDesc());
+
+        return "index";
+    }
     }
 
