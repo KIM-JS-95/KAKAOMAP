@@ -18,13 +18,17 @@
     <br>
 
         <!-- 검색 부분 -->
-        <div class="search">
-            <input type="text" placeholder="검색어를 입력해주세요.">
-        </div>
+    <tr>
+        <td colspan="7"> <br/>
+            <form action="/board/serach" method ="GET">
+                <div class = "search">
+                <input type="text" name="keyword"/>
+                <input type="button" value="검색" onclick="searchCheck(form)" />
+                </div>
+            </form>
 
-        <div class="button">
-            <button>검색</button>
-        </div>
+        </td>
+    </tr>
 
     <!-- 목록 출력 영역 -->
     <table class="table table-horizontal table-bordered">

@@ -10,6 +10,7 @@ private Long id;
 private String add;
 private String type;
 
+
 public PostsListResponseDto(Posts entity){
     this.id= entity.getId();
     this.add=entity.getAdd();
