@@ -3,6 +3,8 @@ package com.kakaomap.domain.posts;
 //you should downgrade gradle version to 4.10.2
 //gradlew wrapper --gradle-version 4.10.2
 
+import com.kakaomap.Repository.PostsRepository;
+import com.kakaomap.entity.clc;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,14 +33,14 @@ public class PostsRepositoryTest {
         String add = "테스트 게시글";
         String type = "타입";
 
-        postsRepository.save(Posts.builder()
+        postsRepository.save(clc.builder()
                 .add(add)
                 .type(type)
                 .build());
 
-        List<Posts> postsList = postsRepository.findAll();
+        List<clc> postsList = postsRepository.findAll();
 
-        Posts posts = postsList.get(0);
+        clc posts = postsList.get(0);
         assertThat(posts.getAdd()).isEqualTo(add);
         assertThat(posts.getType()).isEqualTo(type);
     }

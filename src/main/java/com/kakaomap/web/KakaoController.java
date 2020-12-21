@@ -16,23 +16,23 @@ import java.util.List;
 public class KakaoController {
 
     private final PostsService postsService;
-    private final BoardService boardService;
 
-    // list로 출력한 posts 변수를 index.mustache 로 넘겨줌
+    // list로 출력
     @GetMapping("/")
     public String index(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "index";
     }
 
-    //검색
-    @GetMapping("/board/search")
-    public String search(@RequestParam(value= "keyword") String keyword, Model model){
-        List<PostsSearchDto> SearchDto = boardService.searchPosts(keyword);
-        model.addAttribute("boardList", SearchDto);
-        return "board/index.mustach";
 
-    }
 
+//    //검색
+//    @GetMapping("/")
+//    public String search(@RequestParam(value= "keyword") String keyword, Model model){
+//        List<PostsSearchDto> SearchDto = postsService.searchPosts(keyword);
+//        model.addAttribute("boardList", SearchDto);
+//        return "templates/index";
+//
+//    }
     }
 

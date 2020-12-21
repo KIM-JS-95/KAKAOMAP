@@ -1,7 +1,6 @@
 package com.kakaomap.web.dto;
 
-import com.kakaomap.domain.posts.Posts;
-import lombok.Builder;
+import com.kakaomap.entity.clc;
 import lombok.Getter;
 
 @Getter
@@ -11,18 +10,19 @@ public class PostsSearchDto {
     private String add;
     private String type;
 
-    public Posts toEntity() {
-        Posts build = Posts.builder()
+    public clc toEntity() {
+        clc build = clc.builder()
+                .id(id)
         .add(add)
         .type(type)
        .build();
-
         return build;
     }
 
-    public PostsSearchDto(Posts entity){
-        this.id=entity.getId();
-        this.add=entity.getAdd();
-        this.type=entity.getType();
-    }
+//    @Builder
+//    public PostsSearchDto(Long id, String add, String type){
+//        this.id=id;
+//        this.add=add;
+//        this.type=type;
+//    }
 }
