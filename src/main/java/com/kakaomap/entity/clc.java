@@ -30,4 +30,11 @@ public class clc {
      this.add=add;
      this.type=type;
     }
+
+    public void update(String add, String type){
+        this.add=add;
+        this.type=type;
+    }
+
+
 }

@@ -1,6 +1,7 @@
 package com.kakaomap.domain.posts;
 
 import com.kakaomap.Repository.PostsRepository;
+import com.kakaomap.entity.clc;
 import com.kakaomap.web.dto.PostsListResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -41,5 +42,16 @@ private final PostsRepository postsRepository;
 //                .type(board.getType())
 //                .build();
 //    }
+
+    @Transactional
+    public Long update(Long id, PostsListResponseDto requestDto){
+        clc posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시슬이 없습니다. id =" +id));
+        posts.update(requestDto.getAdd(), requestDto.getType());
+        return id;
+    }
+    public PostsListResponseDto findById(Long id){
+        clc entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
+        return new PostsListResponseDto(entity);
+    }
 
 }

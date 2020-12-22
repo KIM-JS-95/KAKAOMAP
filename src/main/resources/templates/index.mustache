@@ -17,19 +17,6 @@
     </div>
     <br>
 
-        <!-- 검색 부분 -->
-    <tr>
-        <td colspan="7"> <br/>
-            <form action="/board/serach" method ="GET">
-                <div class = "search">
-                <input type="text" name="keyword" placeholder="위치를 입력해 주세요."/>
-                <button>검색하기</button>
-                </div>
-            </form>
-
-        </td>
-    </tr>
-
     <!-- 목록 출력 영역 -->
     <table class="table table-horizontal table-bordered">
         <thead class="thead-strong">
@@ -43,13 +30,20 @@
         {{#posts}}
             <tr>
                 <td>{{id}}</td>
-                <td>{{add}}</td>
+                <td> <a href="/clc/update/{{id}}"> {{add}}</td>
                 <td>{{type}}</td>
             </tr>
         {{/posts}}
         </tbody>
     </table>
-</div>
 
+    <div id="pagination">
+        <a href="#" class="on">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+    </div>
+
+
+</div>
 </body>
 </html>
