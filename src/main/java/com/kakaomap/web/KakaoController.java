@@ -28,12 +28,20 @@ public class KakaoController {
 
 
     //map.html으로 보내야하는데
-    @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model) {
-        PostsListResponseDto dto = postsService.findById(id);
-        model.addAttribute("post", dto);
 
-        return "posts-update";
+    //메모리 주소 참조를 어떻게하지?
+    @GetMapping("/map/{id}")
+    public String postsAdd(@PathVariable Long id, Model model) {
+        PostsListResponseDto dto = postsService.findById(id);
+        model.addAttribute("post", "SSSSSSS");
+
+
+
+        System.out.println("==========================");
+        System.out.println(model.addAttribute("post", "SSSSSSS"));
+        System.out.println("==========================");
+
+        return "View";
     }
 
 

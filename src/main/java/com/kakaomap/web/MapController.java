@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 //지도
 @Controller
 public class MapController {
-    @GetMapping("/map")
+    @GetMapping("/map/true")
     public String View(){
         return "View";
     }
