@@ -21,34 +21,7 @@ private final PostsRepository postsRepository;
     return postsRepository.findAll().stream().map(PostsListResponseDto::new).collect(Collectors.toList());
 }
 
-//    @Transactional
-//    public List<PostsSearchDto> searchPosts(String keyword){
-//        List<Posts> boards=postsRepository.findByTitleContaining(keyword);
-//        List<PostsSearchDto> boardDtoList =new ArrayList<>();
-//        if(boards.isEmpty())
-//            return boardDtoList;
-//
-//        for(Posts board : boards){
-//            boardDtoList.add(this.convertEntityToDto(board));
-//        }
-//
-//        return boardDtoList;
-//    }
-//
-//    private PostsSearchDto convertEntityToDto(Posts board){
-//        return PostsSearchDto.builder()
-//                .id(board.getId())
-//                .add(board.getAdd())
-//                .type(board.getType())
-//                .build();
-//    }
-
     @Transactional
-    public Long update(Long id, PostsListResponseDto requestDto){
-        clc posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시슬이 없습니다. id =" +id));
-        posts.update(requestDto.getAdd(), requestDto.getType());
-        return id;
-    }
     public PostsListResponseDto findById(Long id){
         clc entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
         return new PostsListResponseDto(entity);

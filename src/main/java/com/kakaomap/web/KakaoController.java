@@ -33,25 +33,9 @@ public class KakaoController {
     @GetMapping("/map/{id}")
     public String postsAdd(@PathVariable Long id, Model model) {
         PostsListResponseDto dto = postsService.findById(id);
-        model.addAttribute("post", "SSSSSSS");
-
-
-
-        System.out.println("==========================");
-        System.out.println(model.addAttribute("post", "SSSSSSS"));
-        System.out.println("==========================");
+        model.addAttribute("post", dto);
 
         return "View";
     }
-
-
-//    //검색
-//    @GetMapping("/")
-//    public String search(@RequestParam(value= "keyword") String keyword, Model model){
-//        List<PostsSearchDto> SearchDto = postsService.searchPosts(keyword);
-//        model.addAttribute("boardList", SearchDto);
-//        return "templates/index";
-//
-//    }
     }
 
