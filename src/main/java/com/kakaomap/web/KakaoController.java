@@ -27,9 +27,6 @@ public class KakaoController {
     }
 
 
-    //map.html으로 보내야하는데
-
-    //메모리 주소 참조를 어떻게하지?
     @GetMapping("/map/{id}")
     public String postsAdd(@PathVariable Long id, Model model) {
         PostsListResponseDto dto = postsService.findById(id);
