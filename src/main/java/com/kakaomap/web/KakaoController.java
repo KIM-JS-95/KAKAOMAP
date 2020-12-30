@@ -32,12 +32,12 @@ public class KakaoController {
         PostsListResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
 
-        return "View";
+        return "Test";
     }
 
     @GetMapping("/map/search")
     public String search(@PathVariable(value = "keyword") String keyword, Model model) {
-        model.addAttribute("boardList", postsService.findByAdd(keyword));
+        model.addAttribute("post", postsService.findByAdd(keyword));
 
         return "View";
     }

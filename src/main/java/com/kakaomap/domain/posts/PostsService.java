@@ -29,19 +29,6 @@ private final PostsRepository postsRepository;
         return new PostsListResponseDto(entity);
     }
 
-//    @Transactional
-//    public List<PostsSearchDto> searchPosts(String keyword){
-//    List<clc> boards = PostsRepository.findByAdd(keyword);
-//    List<PostsSearchDto> boardDtoList = new ArrayList<>();
-//
-//    if(boards.isEmpty()) return boardDtoList;
-//
-//    for(clc board : boards){
-//        boardDtoList.add(this.convertEntityToDto(board));
-//    }
-//
-//    return boardDtoList;
-//    }
 
 @Transactional(readOnly = true)
 public List<PostsListResponseDto> findByAdd(String keyword){
