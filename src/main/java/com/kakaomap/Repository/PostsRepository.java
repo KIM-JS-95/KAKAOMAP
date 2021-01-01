@@ -10,5 +10,7 @@ import java.util.List;
 
 @Repository
 public interface PostsRepository extends JpaRepository<clc,Long> {
-List<clc> findByAdd(String add);
+
+    @Query("SELECT b FROM clc b WHERE b.add LIKE %?1%")
+    List<clc> findByAdd(String add);
 }

@@ -33,9 +33,8 @@ public class KakaoController {
         return "View";
     }
 
-    @GetMapping("/{add}")
+    @GetMapping("/{keyword}")
     public String search(@PathVariable String keyword, Model model) {
-        System.out.println("what?=" + keyword);
         model.addAttribute("posts", postsService.findByAdd(keyword));
 
         return "index";

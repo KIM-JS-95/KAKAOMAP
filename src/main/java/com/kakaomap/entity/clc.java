@@ -23,7 +23,6 @@ public class clc {
     private String add;
     private String time;
     private String amount;
-    private String keyword;
 
     @Builder
     public clc(Long id, String add, String type){
