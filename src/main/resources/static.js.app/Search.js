@@ -1,30 +1,30 @@
 var main = {
 init : function() {
 var _this = this;
-$('#btn-update').on('click', function () {
-            _this.update();
+$('#searchBtn').on('click', function () {
+            _this.search();
         });
 },
 
-    update : function () {
+    search : function () {
         var data = {
-            add: $('#add').val(),
+            add1: $('#add1').val(),
+            add2: $('#add2').val()
         };
 
-        var id = $('#id').val();
+        var keyword = $('#add1').val() + $('#add2').val();
 
         $.ajax({
-            type: 'PUT',
-            url: '/api/v1/posts/'+id,
+            type: 'POST',
+            url: '/'
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function() {
-            alert('글이 수정되었습니다.');
-            window.location.href = '/';
+            alert(keyword);
         }).fail(function (error) {
-            alert(JSON.stringify(error));
+
         });
     }
-
-}
+};
+main.init();

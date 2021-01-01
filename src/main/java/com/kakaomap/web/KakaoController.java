@@ -6,9 +6,7 @@ import com.kakaomap.web.dto.PostsSearchDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,15 +30,17 @@ public class KakaoController {
         PostsListResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
 
-        return "Test";
-    }
-
-    @GetMapping("/map/search")
-    public String search(@PathVariable(value = "keyword") String keyword, Model model) {
-        model.addAttribute("post", postsService.findByAdd(keyword));
-
         return "View";
     }
+
+    @GetMapping("/{add}")
+    public String search(@PathVariable String keyword, Model model) {
+        System.out.println("what?=" + keyword);
+        model.addAttribute("posts", postsService.findByAdd(keyword));
+
+        return "index";
+    }
+
 
 
     }

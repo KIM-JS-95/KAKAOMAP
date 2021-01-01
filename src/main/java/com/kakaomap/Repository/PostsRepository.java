@@ -10,5 +10,5 @@ import java.util.List;
 
 @Repository
 public interface PostsRepository extends JpaRepository<clc,Long> {
-List<clc> findByAdd(String keyword);
+List<clc> findByAdd(String add);
 }

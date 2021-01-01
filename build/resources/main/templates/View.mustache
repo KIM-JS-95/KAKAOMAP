@@ -1,29 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>주소로 장소 표시하기</title>
 
-{{>layout/header}}
+{{>layout/css}}
 
+</head>
 <body>
+
+<p style="margin-top:-12px">
+    <em class="link">
+        <a href="javascript:void(0);" onclick="window.open('http://fiy.daum.net/fiy/map/CsGeneral.daum', '_blank', 'width=981, height=650')">
+            혹시 주소 결과가 잘못 나오는 경우에는 여기에 제보해주세요.
+        </a>
+
+        <a href="/web/documentation/#CategoryCode" target="_blank">카테고리 코드목록을 보시려면 여기를 클릭하세요!</a>
+    </em>
+
+</p>
 <div class="map_wrap">
-    <div id="map" style="width:100%;height:300%;position:relative;overflow:hidden;"></div>
-
-    <div id="menu_wrap" class="bg_white">
-        <div class="option">
-            <div>
-
-                <form onsubmit="searchPlaces(); return false;">
-                    키워드 : <input type="text" value="{{post.add}}" + id="keyword" size="15">
-                            <button type="submit">검색하기</button>
-                </form>
-            </div>
-        </div>
-        <hr>
-        <ul id="placesList"></ul>
-        <div id="pagination"></div>
-    </div>
+    <div id="map" style="width:100%;height:350%;position:relative;overflow:hidden;"></div>
+    <ul id="category">
+        <li id="BK9" data-order="0">
+            <span class="category_bg bank"></span>
+            은행
+        </li>
+        <li id="MT1" data-order="1">
+            <span class="category_bg mart"></span>
+            마트
+        </li>
+        <li id="PM9" data-order="2">
+            <span class="category_bg pharmacy"></span>
+            약국
+        </li>
+        <li id="OL7" data-order="3">
+            <span class="category_bg oil"></span>
+            주유소
+        </li>
+        <li id="CE7" data-order="4">
+            <span class="category_bg cafe"></span>
+            카페
+        </li>
+        <li id="CS2" data-order="5">
+            <span class="category_bg store"></span>
+            편의점
+        </li>
+    </ul>
 </div>
 
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1892ee6c4c9137f82f935dc73a358bec&libraries=services"></script>
 
+<!-- DB 주소값 불러오기 -->
 {{>layout/func}}
+
+
+<!-- 카테고리별 장소 표시 -->
+{{>layout/func1}}
+
 </body>
 </html>

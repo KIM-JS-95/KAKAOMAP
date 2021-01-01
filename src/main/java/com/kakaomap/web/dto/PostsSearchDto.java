@@ -5,11 +5,12 @@ import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-public class PostsSearchDto {
+public class PostsSearchDto extends clc{
 
     private Long id;
     private String add;
     private String type;
+    private String keyword;
 
 
     public PostsSearchDto(clc entity){
