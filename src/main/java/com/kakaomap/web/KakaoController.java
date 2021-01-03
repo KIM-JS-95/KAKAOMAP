@@ -18,10 +18,17 @@ public class KakaoController {
     private final PostsService postsService;
 
     // list로 출력
-    @GetMapping("/")
+
+    @GetMapping("/test")
+    public String main(Model model){
+        //model.addAttribute("posts", postsService.findAllDesc());
+        return "test";
+    }
+
+    @GetMapping("/test2")
     public String index(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
-        return "index";
+        return "test2";
     }
 
 
@@ -33,13 +40,12 @@ public class KakaoController {
         return "View";
     }
 
-    @GetMapping("/{keyword}")
+    @GetMapping("/test2={keyword}")
     public String search(@PathVariable String keyword, Model model) {
         model.addAttribute("posts", postsService.findByAdd(keyword));
 
-        return "index";
+        return "test2";
     }
-
 
 
     }
