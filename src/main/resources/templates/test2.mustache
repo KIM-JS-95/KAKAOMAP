@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
-    <title>Elegance - Creative HTML5 Template</title>
+    <title>Searching Electric charging station</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -29,82 +29,75 @@
             <span></span>
         </div>
     </div>
-</div>
 
 
     <header id="header">
         <div class="container-fluid">
             <div class="navbar">
                 <a href="#" id="logo" title="Elegance by TemplateMo">
-                    Elegance
+                    E.C STATION
                 </a>
-                <div class="navigation-row">
-                    <nav id="navigation">
-                        <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i></button>
-                        <div class="nav-box navbar-collapse">
-                            <ul class="navigation-menu nav navbar-nav navbars" id="nav">
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+
             </div>
         </div>
     </header>
 
+    <video autoplay muted loop id="myVideo">
+        <source src="/images/NIO ES8.mp4" type="video/mp4">
+    </video>
+
 <div id="fullpage" class="fullpage-default">
 
-    <h1>전기차 충전소 주소 검색</h1>
+    <!-- 메인페이지 -->
+    <div class="section animated-row" data-section="slide01">
+        <div class="section-inner">
+            <div class="welcome-box">
 
-    <div class = "col-md-12">
-        <div class = "row">
-            <div class = "col-md-6">
+                <div class = "col-md-12">
+                    <div class = "row">
+                        <div class = "col-md-6">
+                        </div>
+                    </div>
+                    <br>
+                    {{>addressSelection}}
+                    <br>
+                    <!-- 목록 출력 영역 -->
+                    <table width="10" class="table table-horizontal table-bordered">
+                        <thead class="thead-strong">
+                        <tr>
+                            <th>주소</th>
+                            <th>충전기 타입</th>
+                        </tr>
+                        </thead>
+                        <tbody width="10" id="tbody">
+                        {{#posts}}
+                            <tr>
+                                <td> <a href="/map/{{id}}">{{add}}</td>
+                                <td>{{type}}</td>
+                            </tr>
+                        {{/posts}}
+                        </tbody>
+                    </table>
+
+                </div>
+
             </div>
         </div>
-        <br>
-
-        {{>addressSelection}}
-
-        <!-- 목록 출력 영역 -->
-        <table class="table table-horizontal table-bordered">
-            <thead class="thead-strong">
-            <tr>
-                <th>게시글번호</th>
-                <th>주소</th>
-                <th>충전기 타입</th>
-            </tr>
-            </thead>
-            <tbody id="tbody">
-            {{#posts}}
-                <tr>
-                    <td>{{id}}</td>
-                    <td> <a href="/map/{{id}}">{{add}}</td>
-                    <td>{{type}}</td>
-                </tr>
-            {{/posts}}
-            </tbody>
-        </table>
     </div>
 
-
-
-
 </div>
-
-
-
-
-
-
 <div id="social-icons">
     <div class="text-right">
         <ul class="social-icons">
-            <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#" title="Instagram"><i class="fa fa-behance"></i></a></li>
+            <li><a href="https://github.com/KIM-JS-95" title="Github"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://instagram.com/k.jasoooon" title="Instagram"><i class="fa fa-instagram"></i></a></li>
         </ul>
     </div>
 </div>
+
+</div>
+
+
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -114,6 +107,7 @@
 <script src="js/jquery.inview.min.js"></script>
 <script src="js/form.js"></script>
 <script src="js/custom.js"></script>
+
 
 </body>
 </html>

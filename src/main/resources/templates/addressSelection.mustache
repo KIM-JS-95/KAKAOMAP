@@ -25,7 +25,7 @@
     </select>
 
     {{>layout/Address}}
-    <br><button type="button" id ="searchBtn" onclick="button1_click();">검색</button>
+    <button type="button" id ="searchBtn" onclick="button1_click();">검색</button>
 
 
 <script>
@@ -33,7 +33,6 @@ function button1_click() {
 	var target1 = document.getElementById("add1");
     var target2 = document.getElementById("add2");
     var add = target1.options[target1.selectedIndex].text + " "+ target2.options[target2.selectedIndex].text
-    alert("해당 주소로 검색하시겠습니까? "+ "\n" + add);
     window.location.href = '/test2='+add;
 }
 </script>
