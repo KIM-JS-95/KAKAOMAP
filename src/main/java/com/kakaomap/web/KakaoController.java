@@ -25,12 +25,18 @@ public class KakaoController {
         return "test";
     }
 
-    @GetMapping("/test2")
+    @GetMapping("/")
     public String index(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
-        return "test2";
+        return "index";
     }
 
+    @GetMapping("/index2={keyword}")
+    public String search(@PathVariable String keyword, Model model) {
+        model.addAttribute("posts", postsService.findByAdd(keyword));
+
+        return "index2";
+    }
 
     @GetMapping("/map/{id}")
     public String postsAdd(@PathVariable Long id, Model model) {
@@ -39,14 +45,6 @@ public class KakaoController {
 
         return "View";
     }
-
-    @GetMapping("/test2={keyword}")
-    public String search(@PathVariable String keyword, Model model) {
-        model.addAttribute("posts", postsService.findByAdd(keyword));
-
-        return "test2";
-    }
-
 
     }
 
