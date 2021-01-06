@@ -24,31 +24,36 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="dc90c807-c3a3-4766-8e8d-0ac6c9147817">
-        <schema name="mysql" object-types="view, table, function" />
-        <schema name="stock" object-types="index, column, view, table, constraint, procedure, dataset trigger, function" />
-      </connection>
-      <connection connection-id="141bc855-f989-404a-9128-0838f0e15543">
-        <schema name="mysql" object-types="index, column, view, table, constraint, procedure, dataset trigger, function" />
-        <schema name="springboot2_webservice" object-types="index, column, view, table, constraint, procedure, dataset trigger, function" />
+      <connection connection-id="522b3a8d-cfa2-464f-b6f7-d84d5804f7bf">
+        <schema name="kakaomap" object-types="index, procedure, function, column, constraint, table, view, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="dc90c807-c3a3-4766-8e8d-0ac6c9147817">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
-      <console name="KAKOMAP" type="STANDARD" schema="mysql" session="Main"><![CDATA[select now();]]></console>
-    </connection>
-    <connection id="141bc855-f989-404a-9128-0838f0e15543">
-      <console name="kakao" type="STANDARD" schema="mysql" session="Main" />
+    <connection id="522b3a8d-cfa2-464f-b6f7-d84d5804f7bf">
+      <console name="KAKAO" type="STANDARD" schema="mysql" session="Main"><![CDATA[DROP TABLE IF EXISTS `clc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `clc` (
+  `agency` varchar(100) NOT NULL,
+  `station` varchar(100) NOT NULL,
+  `chargerID` varchar(10) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `region` varchar(100) NOT NULL,
+  `state` varchar(100) NOT NULL,
+  `add` varchar(100) NOT NULL,
+  `time` varchar(100) NOT NULL,
+  `amount` varchar(100) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="dc90c807-c3a3-4766-8e8d-0ac6c9147817" />
-    <connection id="141bc855-f989-404a-9128-0838f0e15543" />
+    <connection id="522b3a8d-cfa2-464f-b6f7-d84d5804f7bf" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -79,93 +84,10 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="dc90c807-c3a3-4766-8e8d-0ac6c9147817" active="true">
+      <connection id="522b3a8d-cfa2-464f-b6f7-d84d5804f7bf" active="true">
         <database>
-          <name value="KAKOMAP" />
-          <description value="KAKOMAP" />
-          <database-type value="MYSQL" />
-          <config-type value="BASIC" />
-          <database-version value="8.0" />
-          <driver-source value="BUILTIN" />
-          <driver-library value="" />
-          <driver value="" />
-          <url-type value="DATABASE" />
-          <host value="localhost" />
-          <port value="3306" />
-          <database value="mysql" />
-          <type value="USER_PASSWORD" />
-          <user value="root" />
-          <deprecated-pwd value="V290amRANDg3" />
-        </database>
-        <properties>
-          <auto-commit value="false" />
-        </properties>
-        <ssh-settings>
-          <active value="false" />
-          <proxy-host value="" />
-          <proxy-port value="22" />
-          <proxy-user value="" />
-          <deprecated-proxy-pwd value="" />
-          <auth-type value="PASSWORD" />
-          <key-file value="" />
-          <key-passphrase value="" />
-        </ssh-settings>
-        <ssl-settings>
-          <active value="false" />
-          <certificate-authority-file value="" />
-          <client-certificate-file value="" />
-          <client-key-file value="" />
-        </ssl-settings>
-        <details>
-          <charset value="UTF-8" />
-          <session-management value="true" />
-          <ddl-file-binding value="true" />
-          <database-logging value="false" />
-          <connect-automatically value="true" />
-          <restore-workspace value="true" />
-          <restore-workspace-deep value="true" />
-          <environment-type value="default" />
-          <idle-time-to-disconnect value="30" />
-          <idle-time-to-disconnect-pool value="5" />
-          <credential-expiry-time value="10" />
-          <max-connection-pool-size value="7" />
-          <alternative-statement-delimiter value="" />
-        </details>
-        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
-          <object-type-filter use-master-settings="true">
-            <object-type name="SCHEMA" enabled="true" />
-            <object-type name="USER" enabled="true" />
-            <object-type name="ROLE" enabled="true" />
-            <object-type name="PRIVILEGE" enabled="true" />
-            <object-type name="CHARSET" enabled="true" />
-            <object-type name="TABLE" enabled="true" />
-            <object-type name="VIEW" enabled="true" />
-            <object-type name="MATERIALIZED_VIEW" enabled="true" />
-            <object-type name="NESTED_TABLE" enabled="true" />
-            <object-type name="COLUMN" enabled="true" />
-            <object-type name="INDEX" enabled="true" />
-            <object-type name="CONSTRAINT" enabled="true" />
-            <object-type name="DATASET_TRIGGER" enabled="true" />
-            <object-type name="DATABASE_TRIGGER" enabled="true" />
-            <object-type name="SYNONYM" enabled="true" />
-            <object-type name="SEQUENCE" enabled="true" />
-            <object-type name="PROCEDURE" enabled="true" />
-            <object-type name="FUNCTION" enabled="true" />
-            <object-type name="PACKAGE" enabled="true" />
-            <object-type name="TYPE" enabled="true" />
-            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
-            <object-type name="ARGUMENT" enabled="true" />
-            <object-type name="DIMENSION" enabled="true" />
-            <object-type name="CLUSTER" enabled="true" />
-            <object-type name="DBLINK" enabled="true" />
-          </object-type-filter>
-          <object-name-filters />
-        </object-filters>
-      </connection>
-      <connection id="141bc855-f989-404a-9128-0838f0e15543" active="true">
-        <database>
-          <name value="kakao" />
-          <description value="" />
+          <name value="KAKAO" />
+          <description value="KAKAO" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
           <database-version value="5.5" />
@@ -208,6 +130,7 @@
           <restore-workspace value="true" />
           <restore-workspace-deep value="true" />
           <environment-type value="default" />
+          <connectivity-timeout value="5" />
           <idle-time-to-disconnect value="30" />
           <idle-time-to-disconnect-pool value="5" />
           <credential-expiry-time value="10" />
