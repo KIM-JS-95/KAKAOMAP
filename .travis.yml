@@ -18,16 +18,16 @@ before_install:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r kakaomap ./*
+  - zip -r KAKAOMAP ./*
   - mkdir -p deploy
-  - mv kakaomap.zip deploy/kakaomap.zip
+  - mv KAKAOMAP.zip deploy/KAKAOMAP.zip
 
 deploy:
   - provider: s3
     access_key_id: AKIAJU3OEHT72IDEPPOA
     secret_access_key: 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
 
-    bucket: kakaomap-build
+    bucket: KAKAOMAP
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
