@@ -3,7 +3,8 @@ jdk:
   - openjdk8
 
     branches:
-      only: -main
+      only:
+      - main
 
       cache:
         directories:
