@@ -39,7 +39,7 @@ deploy:
     access_key_id: AKIAJU3OEHT72IDEPPOA # Travis repo settings에 설정된 값
     secret_access_key: DUNDCmIwJfYIvne2EQd8yYi7X/IwdxGQRtBlq7Hc # Travis repo settings에 설정된 값
     bucket: kakaomap # S3 버킷
-    key: KAKAOMAP.zip # 빌드 파일을 압축해서 전달
+    key: kakao.zip # 빌드 파일을 압축해서 전달
     bundle_type: zip
     application: KAKAOMAP # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
     deployment_group: KAKAOMAP # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
