@@ -37,10 +37,12 @@
 # Intro
 ### 1.MAIN PAGE
 ![1](https://user-images.githubusercontent.com/65659478/103516363-c1a72000-4eb3-11eb-98d6-ddb5b29c0d1c.jpg)
-
+![4](https://user-images.githubusercontent.com/65659478/103996407-25478b00-51dd-11eb-8104-5e27c4ae8e24.jpg)
 It consists of four-part slides that can be moved by scrolling and configured responsively so that the page size changes freely depending on the size. 
 
 You can search for addresses on the MAP slide No. 3, and when you do, go to the ADD Searching page.
+
+
 
 
 ### 2. Adresses Searching page
@@ -50,6 +52,7 @@ If the address search was successful, we had the DB bring in and display the ent
 
 Click an address to send it to the MAP page and display it on the map.
 
+It consists of 5 slides so you can check the information you need, such as developer information and vehicle company homepage.
 
 ### 3. Map page
 ![3](https://user-images.githubusercontent.com/65659478/103516433-e13e4880-4eb3-11eb-985e-75777cbfe3a3.jpg)
