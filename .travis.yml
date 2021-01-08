@@ -33,6 +33,17 @@ deploy:
     local_dir: deploy
     wait_until_deployed : true
 
+  - provider: codedeploy
+      access_key_id: AKIAJU3OEHT72IDEPPOA
+      secret_access_key: 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
+      bucket: kakaomap
+      key: KAKAOMAP.zip
+      bundle_type: zip
+      application: KAKAOMAP
+      deployment_group: KAKAOMAP
+      region: ap-northeast-2
+      wait-until-deployed: true
+
 
 # CI 실행 완료 시 메일로 알람
 notifications:
