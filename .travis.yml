@@ -18,7 +18,7 @@ before_install:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r KAKAOMAP *
+  - zip -r KAKAOMAP KAKAOMAP
   - mkdir -p deploy
   - mv KAKAOMAP.zip deploy/KAKAOMAP.zip
 
