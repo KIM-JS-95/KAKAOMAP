@@ -1,4 +1,4 @@
-## Electronic Charge station
+## Electronic Charge station [![Build Status](https://travis-ci.org/KIM-JS-95/KAKAOMAP.svg?branch=main)](https://travis-ci.org/KIM-JS-95/KAKAOMAP)
  Create a map that Charge station for electric vehicles With KAKAO Api
 
 카카오 api를 사용하여 개발한 전기충전소 위치 제공 서비스입니다. 웹에서 간단한 주소를 입력하여 편리하게 지도로 확인가능하며 충전시간동안 여유시간을 이용하여 편의 시설을 이용할 수 있도록 공공시설 레이아웃을 제공합니다. 
