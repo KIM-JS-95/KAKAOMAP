@@ -28,9 +28,9 @@ before_deploy:
 
 deploy:
   - provider: s3
-    access_key_id: AKIAJU3OEHT72IDEPPOA
+    access_key_id: $AWS_ACCESS_KEY
     secret_access_key:
-      secure: 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
+      secure: $AWS_SECRET_KEY
     bucket: kakaomap
     region: ap-northeast-2
     skip_cleanup: true
@@ -39,9 +39,9 @@ deploy:
     wait_until_deployed : true
 
   - provider: codedeploy
-    access_key_id: AKIAJU3OEHT72IDEPPOA # Travis repo settings에 설정된 값
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key:
-      secure: DUNDCmIwJfYIvne2EQd8yYi7X/IwdxGQRtBlq7Hc # Travis repo settings에 설정된 값
+      secure: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
     bucket: kakaomap # S3 버킷
     key: KAKAOMAP.zip # 빌드 파일을 압축해서 전달
     bundle_type: zip
