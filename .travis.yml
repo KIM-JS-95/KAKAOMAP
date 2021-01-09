@@ -17,25 +17,6 @@ before_install:
 
 script: "./gradlew clean build"
 
-before_deploy:
-  - zip -r KAKAOMAP *
-  - mkdir -p deploy
-  - mv KAKAOMAP.zip deploy/KAKAOMAP.zip
-
-deploy:
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key:
-      secure: $AWS_SECRET_KEY
-    bucket: kakaomap
-    region: ap-northeast-2
-    skip_cleanup: true
-    acl: public_read
-    local_dir: deploy
-    wait_until_deployed : true
-    on:
-    repo: KIM-JS-95/KAKAOMAP
-    branch: main
 
 # CI 실행 완료 시 메일로 알람
 notifications:
