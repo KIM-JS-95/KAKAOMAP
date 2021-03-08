@@ -2,6 +2,8 @@
 
 [WEBSITE DNS]  http://www.ecstation.tk/
 
+** 현재 aws 비용 미지불로 서비스가 중지되어 있는 상태 입니다.
+
 Create a map that Charge station for electric vehicles With KAKAO Api
 
 카카오 api를 사용하여 개발한 전기충전소 위치 제공 서비스입니다. 
