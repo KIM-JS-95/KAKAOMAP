@@ -3,12 +3,9 @@ package com.kakaomap.domain.posts;
 import com.kakaomap.Repository.PostsRepository;
 import com.kakaomap.entity.clc;
 import com.kakaomap.web.dto.PostsListResponseDto;
-import com.kakaomap.web.dto.PostsSearchDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
